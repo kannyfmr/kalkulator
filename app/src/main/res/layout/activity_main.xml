@@ -4,15 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <EditText
+       android:id="@+id/eBirth"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:hint="Enter Your Birthday"
+       android:inputType="number"
+       android:ems="10"
+       app:layout_constraintHorizontal_bias="0.502"
+       android:layout_marginTop="60dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       />
+   <TextView
+       android:id="@+id/tvBirth"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="100dp"
+       android:textSize="25sp"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintHorizontal_bias="0.502"
+       app:layout_constraintTop_toBottomOf="@+id/eBirth"
 
+       />
+
+   <Button
+       android:id="@+id/btnAge"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@android:color/holo_green_dark"
+       android:text="CEK"
+       android:onClick="calculateAge"
+       android:textColor="#FFFFFF"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/tvBirth"
+       android:layout_marginTop="50dp"
+       />
 </android.support.constraint.ConstraintLayout>
